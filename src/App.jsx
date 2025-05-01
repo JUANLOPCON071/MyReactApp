@@ -1,6 +1,7 @@
 import './App.css'
 import Card from './componentes/Card';
 import Counter from './componentes/Counter';
+import CounterWhithEffect from './componentes/CounterWithEffect';
 import NameForm from './componentes/NameForm';
 import ToggleButton from './componentes/ToggleButton';
 
@@ -21,7 +22,8 @@ function App() {
       </ul>
       <Counter/>
       <ToggleButton/> */}
-      <NameForm/>
+      {/* <NameForm/> */}
+      <CounterWhithEffect/>
     </section>
   )
 }
