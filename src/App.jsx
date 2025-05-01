@@ -1,6 +1,7 @@
 import './App.css'
 import Card from './componentes/Card';
 import Counter from './componentes/Counter';
+import ToggleButton from './componentes/ToggleButton';
 
 function App() {
   const items = ["React", "JavaScript", "Vite"];
@@ -18,6 +19,7 @@ function App() {
         }
       </ul>
       <Counter/>
+      <ToggleButton/>
     </section>
   )
 }
