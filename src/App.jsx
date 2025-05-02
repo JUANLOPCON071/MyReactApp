@@ -1,4 +1,5 @@
 import './App.css'
+import Button from './componentes/Button/Button';
 import Card from './componentes/Card/Card';
 import Counter from './componentes/Counter';
 import CounterWhithEffect from './componentes/CounterWithEffect';
@@ -9,11 +10,10 @@ function App() {
   const items = ["React", "JavaScript", "Vite"];
 
   return (
-    <section>
-      <h1>Formulario de nombre</h1>
-      <Card/>
-      <CounterWhithEffect/>
-    </section>
+    <>
+      <Button><p>Gris</p></Button>
+      <Button blue><p>Azul</p></Button>
+    </>
   )
 }
 
