@@ -7,6 +7,7 @@ import NameForm from './componentes/NameForm';
 import StaticComponent from './componentes/StaticComponent/StaticComponent';
 import TailwindText from './componentes/Text/Text';
 import ToggleButton from './componentes/ToggleButton';
+import UserList from './componentes/UserList/UserList';
 
 function App() {
   const items = ["React", "JavaScript", "Vite"];
@@ -14,6 +15,7 @@ function App() {
   return (
     <>
       <StaticComponent/>
+      <UserList/>
     </>
   )
 }
