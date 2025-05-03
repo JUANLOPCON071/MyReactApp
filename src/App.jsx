@@ -8,6 +8,7 @@ import StaticComponent from './componentes/StaticComponent/StaticComponent';
 import TailwindText from './componentes/Text/Text';
 import ToggleButton from './componentes/ToggleButton';
 import UserList from './componentes/UserList/UserList';
+import UserListWithLoading from './componentes/UserListWithLoading/UserListWithLoading';
 
 function App() {
   const items = ["React", "JavaScript", "Vite"];
@@ -15,7 +16,8 @@ function App() {
   return (
     <>
       <StaticComponent/>
-      <UserList/>
+      {/* <UserList/> */}
+      <UserListWithLoading/>
     </>
   )
 }
