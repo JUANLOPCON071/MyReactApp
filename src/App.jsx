@@ -1,23 +1,45 @@
+import { createContext, useContext, useState } from 'react';
 import './App.css'
-import Button from './componentes/Button/Button';
-import Card from './componentes/Card/Card';
 import Counter from './componentes/Counter/Counter';
-import CounterWhithEffect from './componentes/CounterWithEffect';
-import NameForm from './componentes/NameForm';
-import SearchPosts from './componentes/SearchPosts/SearchPosts';
-import StaticComponent from './componentes/StaticComponent/StaticComponent';
-import TailwindText from './componentes/Text/Text';
-import ToggleButton from './componentes/ToggleButton';
-import UserList from './componentes/UserList/UserList';
-import UserListWithLoading from './componentes/UserListWithLoading/UserListWithLoading';
 
-function App() {
-  const items = ["React", "JavaScript", "Vite"];
+const ThemeContext = createContext();
+
+function ThemeProvider({ children }) {
+  const [theme, setTheme] = useState("light")
+
+  const toggleTheme = () => {
+    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"))
+  }
 
   return (
-    <>
-      <Counter/>
-    </>
+    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+      {children}
+    </ThemeContext.Provider>
+  )
+}
+
+function ThemeButton() {
+  const { theme, toggleTheme } = useContext(ThemeContext);
+
+  return (
+    <button
+      onClick={toggleTheme}
+      style={{
+        backgroundColor: theme === "light" ? "#FFF" : "#333",
+        color: theme === "light" ? "#000" : "#FFF",
+      }}
+    >
+      Cambiar tema
+    </button>
+  )
+}
+
+function App() {
+
+  return (
+    <ThemeProvider>
+      <ThemeButton/>
+    </ThemeProvider>
   )
 }
 
