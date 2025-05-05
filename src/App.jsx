@@ -1,7 +1,7 @@
 import './App.css'
 import Button from './componentes/Button/Button';
 import Card from './componentes/Card/Card';
-import Counter from './componentes/Counter';
+import Counter from './componentes/Counter/Counter';
 import CounterWhithEffect from './componentes/CounterWithEffect';
 import NameForm from './componentes/NameForm';
 import SearchPosts from './componentes/SearchPosts/SearchPosts';
@@ -16,7 +16,7 @@ function App() {
 
   return (
     <>
-      <SearchPosts/>
+      <Counter/>
     </>
   )
 }
