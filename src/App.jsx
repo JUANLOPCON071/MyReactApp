@@ -1,6 +1,7 @@
 import { createContext, useContext, useState } from 'react';
 import './App.css'
 import Counter from './componentes/Counter/Counter';
+import CounterWithCustomHook from './componentes/CounterWithCustomHook/CounterWithCustomHook';
 
 const ThemeContext = createContext();
 
@@ -37,9 +38,12 @@ function ThemeButton() {
 function App() {
 
   return (
-    <ThemeProvider>
-      <ThemeButton/>
-    </ThemeProvider>
+    <>
+      <ThemeProvider>
+        <ThemeButton/>
+      </ThemeProvider>
+      <CounterWithCustomHook/>
+    </>
   )
 }
 
